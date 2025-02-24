@@ -3,7 +3,7 @@ import IndexView from "../views/IndexView.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/wbpinturas",
     component: IndexView,
     name: "Index",
   },
