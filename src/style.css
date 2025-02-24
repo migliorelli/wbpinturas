@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-50: oklch(97.5% 0.03 85.86);
+  --color-primary-100: oklch(95% 0.07 85.77);
+  --color-primary-200: oklch(89.2% 0.14 85.85);
+  --color-primary-300: oklch(82.8% 0.21 85.87);
+  --color-primary-400: oklch(76.5% 0.26 84.76);
+  --color-primary-500: oklch(67.8% 0.3 73.19);
+  --color-primary-600: oklch(61.8% 0.3 61.69);
+  --color-primary-700: oklch(51.9% 0.28 47.69);
+  --color-primary-800: oklch(44.1% 0.26 40.89);
+  --color-primary-900: oklch(38.6% 0.22 37.27);
+  --color-primary-950: oklch(23.7% 0.14 37.85);
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  caret-color: theme("colors.primary.600");
+  scroll-behavior: smooth;
+
+  & ::selection {
+    background-color: --alpha(theme("colors.primary.400") / 20%);
+  }
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+@layer components {
+  .btn {
+    @apply bg-primary-400 hover:bg-primary-400/80 inline-flex h-10 items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium whitespace-nowrap text-white transition-colors disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0;
+  }
+  .btn-border {
+    @apply hover:bg-primary-400/10 hover:border-primary-400/20 border-1 border-gray-200 bg-transparent text-gray-900;
+  }
+
+  .nav-link {
+    @apply hover:text-primary-400 text-gray-600 transition-colors [&_svg]:size-4 [&_svg]:shrink-0;
+  }
+
+  .ship {
+    @apply bg-primary-400/10 text-primary-400 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold [&_svg]:size-4 [&_svg]:shrink-0;
+  }
+
+  .input {
+    @apply focus:ring-primary-400/20 focus:border-primary-400 w-full rounded-xl border border-gray-300 px-4 py-3 focus:ring-2 focus:outline-none;
+  }
+}
