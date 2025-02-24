@@ -1,7 +1,8 @@
 {
   "name": "welderbringhenti",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
+  "homepage": "http://migliorelli.github.io/wbpinturas",
   "type": "module",
   "scripts": {
     "dev": "vite",
