@@ -7,7 +7,7 @@ import { Phone } from "lucide-vue-next";
     class="fixed top-0 left-0 z-50 h-18 w-[100dvw] border-b border-gray-200 bg-white/80 backdrop-blur-md"
   >
     <div
-      class="container mx-auto flex h-full w-full p-4 items-center justify-between px-4"
+      class="container mx-auto flex h-full w-full p-4 items-center justify-center px-4"
     >
       <RouterLink to="/">
         <img src="/logo.png" class="h-16" />
