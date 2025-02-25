@@ -2,21 +2,22 @@
 import { GalleryHorizontal } from "lucide-vue-next";
 import CardProjeto from "./CardProjeto.vue";
 
-const imagem =
-  "https://projetaronline.com/wp-content/uploads/2022/08/P443-FOTOS_11-Foto-2.jpg";
-
 const projetos = [
-  { titulo: "Projeto 1", descricao: "Pintura residencial", imagem },
-  { titulo: "Projeto 2", descricao: "Pintura residencial", imagem },
-  { titulo: "Projeto 3", descricao: "Pintura residencial", imagem },
-  { titulo: "Projeto 4", descricao: "Pintura residencial", imagem },
-  { titulo: "Projeto 5  ", descricao: "Pintura residencial", imagem },
-  { titulo: "Projeto 6", descricao: "Pintura residencial", imagem },
+  {
+    titulo: "Cimento queimado",
+    descricao: "Efeito de textura cimento queimado",
+    imagem: "/portfolio/cimentoqueimado.jpg",
+  },
+  {
+    titulo: "Catedral Paróquia Sagrado Coração de Jesus",
+    descricao: "Pintura exterior na corda",
+    imagem: "/portfolio/catedral.jpg",
+  },
 ];
 </script>
 
 <template>
-  <section id="portfolio" class="py-20 bg-gray-50">
+  <section id="portfolio" class="bg-gray-50 py-20">
     <div class="container mx-auto px-4 text-center">
       <div class="ship mb-4"><GalleryHorizontal /> Nossos Projetos</div>
       <h1 class="mb-4 text-4xl font-bold">
@@ -28,10 +29,11 @@ const projetos = [
 
       <div class="grid gap-8 md:grid-cols-3">
         <CardProjeto
-          v-for="projeto in projetos"
+          v-for="(projeto, index) in projetos"
           :titulo="projeto.titulo"
           :descricao="projeto.descricao"
           :imagem="projeto.imagem"
+          v-animate-on-view="{ delay: 100 * index }"
         />
       </div>
     </div>
