@@ -3,14 +3,14 @@ import IndexView from "../views/IndexView.vue";
 
 const routes = [
   {
-    path: "/wbpinturas",
+    path: "/",
     component: IndexView,
     name: "Index",
   },
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior(to) {
     if (to.hash) {
