@@ -12,6 +12,20 @@
   --color-primary-800: oklch(44.1% 0.26 40.89);
   --color-primary-900: oklch(38.6% 0.22 37.27);
   --color-primary-950: oklch(23.7% 0.14 37.85);
+
+  --animate-float: float 4s ease-in-out infinite;
+
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 }
 
 body {
