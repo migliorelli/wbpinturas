@@ -19,7 +19,7 @@ const sendMessage = (e: Event) => {
     <div class="container mx-auto px-4">
       <div class="mx-auto max-w-5xl">
         <div class="grid gap-12 md:grid-cols-2">
-          <div class="text-start">
+          <div class="text-start" v-animate-on-view="{ delay: 0 }">
             <h1 class="mb-4 text-4xl font-bold">
               Entre em <span class="text-primary-400">contato</span>
             </h1>
@@ -75,7 +75,10 @@ const sendMessage = (e: Event) => {
             </div>
           </div>
 
-          <div class="rounded-2xl bg-white p-8 shadow-sm">
+          <div
+            class="rounded-2xl bg-white p-8 shadow-sm"
+            v-animate-on-view="{ delay: 100 }"
+          >
             <form class="space-y-4" @submit.prevent="sendMessage">
               <input
                 class="input"

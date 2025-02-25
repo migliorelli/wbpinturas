@@ -7,17 +7,17 @@ import { anos } from "../utils/date";
   <section id="sobre" class="bg-gray-50 py-20">
     <div class="container mx-auto px-4">
       <div class="grid items-center gap-12 md:grid-cols-2">
-        <div class="relative">
+        <div class="relative mb-12 md:mb-0" v-animate-on-view>
           <div class="aspect-square overflow-hidden rounded-2xl">
             <img
-              src="/welder.png"
+              src="/welder.jpg"
               alt="Welder Bringhenti"
               class="size-full object-cover"
             />
           </div>
 
           <div
-            class="absolute bottom-8 left-8 flex max-w-xs rounded-xl bg-white p-6 shadow-md items-center gap-4"
+            class="animate-float absolute bottom-0 left-1/2 flex max-w-sm -translate-x-1/2 translate-y-1/2 items-center gap-4 rounded-xl bg-white/80 p-6 shadow-md backdrop-blur-md md:bottom-8 md:left-8 md:translate-0"
           >
             <div class="text-center">
               <p class="text-primary-400 text-3xl font-bold">{{ anos() }}+</p>
@@ -30,7 +30,7 @@ import { anos } from "../utils/date";
           </div>
         </div>
 
-        <div class="space-y-4">
+        <div class="space-y-4" v-animate-on-view>
           <div class="ship">
             <User />
             Sobre mim

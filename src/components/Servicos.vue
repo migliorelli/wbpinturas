@@ -18,16 +18,19 @@ import CardServico from "./CardServico.vue";
           titulo="Pintura Residencial"
           descricao="Transforme sua casa com cores que combinam com seu estilo de vida e personalidade."
           :icon="House"
+          v-animate-on-view="{ delay: 0 }"
         />
         <CardServico
           titulo="Pintura Comercial"
           descricao="Soluções profissionais para empresas, com execução rápida e sem interferir em suas operações."
           :icon="Building2"
+          v-animate-on-view="{ delay: 100 }"
         />
         <CardServico
           titulo="Texturização"
-          descricao="Uma descricao muito genérica só pra preencher espaço do card."
+          descricao="Textura grafiato, lamato, cristallo e efeito cimento queimado."
           :icon="PaintRoller"
+          v-animate-on-view="{ delay: 200 }"
         />
       </div>
     </div>
