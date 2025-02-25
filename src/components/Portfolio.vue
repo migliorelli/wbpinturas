@@ -2,6 +2,7 @@
 import { GalleryHorizontal } from "lucide-vue-next";
 import CardProjeto from "./CardProjeto.vue";
 
+const BASE = import.meta.env.VITE_BASE_URL;
 const projetos = [
   {
     titulo: "Cimento queimado",
@@ -32,7 +33,7 @@ const projetos = [
           v-for="(projeto, index) in projetos"
           :titulo="projeto.titulo"
           :descricao="projeto.descricao"
-          :imagem="projeto.imagem"
+          :imagem="BASE + projeto.imagem"
           v-animate-on-view="{ delay: 100 * index }"
         />
       </div>
