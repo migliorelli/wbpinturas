@@ -8,6 +8,6 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [vue(), tailwindcss()],
-    base: env.BASE_URL,
+    base: env.VITE_BASE_URL,
   };
 });
